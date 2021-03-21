@@ -34,6 +34,7 @@ com\jit\jd\config\WebConfig.class
 com\jit\jd\service\impl\UserServiceImpl.class
 com\jit\jd\pojo\User.class
 com\jit\jd\validator\IsMobile.class
+com\jit\jd\controller\SecKillController.class
 com\jit\jd\controller\SeckillGoodsController.class
 com\jit\jd\service\IUserService.class
 com\jit\jd\controller\LoginController.class

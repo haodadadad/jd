@@ -33,6 +33,7 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\OrderServiceImp
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\RespBeanEnum.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\demo.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\OrderController.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SecKillController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\GoodsMapper.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\pojo\Goods.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SeckillGoodsController.java

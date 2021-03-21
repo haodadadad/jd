@@ -1,0 +1,12 @@
+
+Q	java:S1252"<This block of commented-out lines of code should be removed.(Èû‹¤
+a
+java:S1192I"LDefine a constant instead of duplicating this literal "secKillFail" 3 times.(ÚÙ\
+e
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.InitializingBean'.(åÑ¦œ
+L
+java:S37400"/Provide the parametrized type for this generic.(‚Ê«8Íšä¥…/
+]
+java:S1192H"GDefine a constant instead of duplicating this literal "errmsg" 3 times.(Ü¢ÛÆ
+V	java:S1256"<This block of commented-out lines of code should be removed.(€Æ°Êûÿÿÿÿ
+V	java:S125`"<This block of commented-out lines of code should be removed.(®Íû¡ÿÿÿÿÿ

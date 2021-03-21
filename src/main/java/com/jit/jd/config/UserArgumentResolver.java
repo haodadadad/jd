@@ -37,14 +37,13 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
-                                  NativeWebRequest webRequest, WebDataBinderFactory bninderFactory) throws Exception {
-        HttpServletRequest request=webRequest.getNativeRequest(HttpServletRequest.class);
-        HttpServletResponse response=webRequest.getNativeRequest(HttpServletResponse.class);
-        String ticket= CookieUtil.getCookieValue(request,"userTicket");
-        if (StringUtils.isEmpty(ticket)){
+                                  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+        HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
+        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
+        String ticket = CookieUtil.getCookieValue(request, "userTicket");
+        if(StringUtils.isEmpty(ticket)){
             return null;
-
         }
-        return userService.getUserByCookie(ticket,request,response);
+        return userService.getUserByCookie(ticket, request, response);
     }
 }
