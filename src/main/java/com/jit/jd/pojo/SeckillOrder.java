@@ -5,10 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <p>
@@ -25,26 +25,34 @@ public class SeckillOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 秒杀订单ID
-     */
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id",type = IdType.AUTO)
     private Long id;
 
-    /**
-     * 用户ID
-     */
     private Long userId;
 
-    /**
-     * 订单ID
-     */
-    private Long orderId;
+    private Long goodsId;
+
+    private Long deliveryAddrId;
+
+    private String goodsName;
+
+    private Integer goodsCount;
+
+    private BigDecimal goodsPrice;
 
     /**
-     * 商品ID
+     * 订单渠道，1在线，2android，3ios
      */
-    private Long goodsId;
+    private Integer orderChannel;
+
+    /**
+     * 订单状态，0新建未支付，1已支付，2已发货，3已收货，4已退款，5已完成
+     */
+    private Integer status;
+
+    private Date createDate;
+
+    private Date payDate;
 
 
 }

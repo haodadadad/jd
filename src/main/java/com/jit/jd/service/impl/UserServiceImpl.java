@@ -14,7 +14,7 @@ import com.jit.jd.vo.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.util.StringUtils;
+import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +28,6 @@ import javax.servlet.http.HttpServletResponse;
  * @since 2021-03-15
  */
 @Service
-
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
     @Autowired
@@ -51,7 +50,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 //        if (!ValidatorUtil.isMobile(mobile)){
 //            return RespBean.error(RespBeanEnum.MOBILE_ERROR);
 //        }
-        //根据手机号获取用户
+        //跟据手机号获取用户
         User user = userMapper.selectById(mobile);
         if (null == user) {
             throw new GlobalException(RespBeanEnum.LOGIN_ERROR);
@@ -60,13 +59,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (!MD5Util.formPassToDBPass(password, user.getSalt()).equals(user.getPassword())) {
             throw new GlobalException(RespBeanEnum.LOGIN_ERROR);
         }
-        //生成cookie
+
+//        //生成cookie
         String ticket = UUIDUtil.uuid();
-        //将用户信息存入redis中
+        //将用户信息存入redis
         redisTemplate.opsForValue().set("user:" + ticket, user);
-        // request.getSession().setAttribute(ticket,user);
+//        request.getSession().setAttribute(ticket, user);
         CookieUtil.setCookie(request, response, "userTicket", ticket);
-        return RespBean.success(ticket);
+        return RespBean.success();
     }
 
     @Override
@@ -74,10 +74,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (StringUtils.isEmpty(userTicket)) {
             return null;
         }
+
         User user = (User) redisTemplate.opsForValue().get("user:" + userTicket);
+
         if (user != null) {
             CookieUtil.setCookie(request, response, "userTicket", userTicket);
+
         }
+
         return user;
     }
+
 }

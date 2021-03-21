@@ -2,7 +2,6 @@ package com.jit.jd.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jit.jd.mapper.SeckillOrderMapper;
-import com.jit.jd.pojo.Order;
 import com.jit.jd.pojo.SeckillOrder;
 import com.jit.jd.service.ISeckillOrderService;
 import org.springframework.stereotype.Service;

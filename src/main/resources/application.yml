@@ -40,11 +40,11 @@ spring:
 
 
 
-mybatis-plus:
-#  #配置Mapper.xml映射文件
-  mapper-locations: classpath*:/mapper/*Mapper.xml
-  #配置Mybatis数据返回类型别名（默认别名是类名）
-  type-aliases-package: com.jit.jd.pojo
+#mybatis-plus:
+##  #配置Mapper.xml映射文件
+##  mapper-locations: classpath*:/mapper/*Mapper.xml
+#  #配置Mybatis数据返回类型别名（默认别名是类名）
+#  type-aliases-package: com.jit.jd.pojo
 
 ##Mybatis  SQL打印（方法所在的包，不i是Mapper.xml所在的包）
 #logging:

@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class JdApplicationTests {
 
 

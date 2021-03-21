@@ -1,0 +1,55 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jd?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    hikari:
+      #���ӳ���
+      pool-name: DateHikariCP
+      #��С������
+      minimum-idle: 5
+      #�����������ʱ��  Ĭ��600000��10���ӣ�
+      idle-timeout: 180000
+      #���������
+      maximum-pool-size: 10
+      #�����ӳط��ص������Զ��ύ
+      auto-commit: true
+      #���ӳ�ʱʱ�䣬Ĭ��30000��30�룩
+      connection-timeout: 30000
+      #���������ʱ��  0��ʾ���ô��  Ĭ��180000��30���ӣ�
+      max-lifetime: 180000
+      #���������Ƿ���õĲ�ѯ���
+      connection-test-query: SELECT 1
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 100000ms
+    lettuce:
+      pool:
+        #���������
+        max-active: 8
+        #�����������ʱ��
+        max-wait: 10000ms
+
+        #������ʱ��
+        max-idle: 200
+
+
+
+#mybatis-plus:
+##  #����Mapper.xmlӳ���ļ�
+##  mapper-locations: classpath*:/mapper/*Mapper.xml
+#  #����Mybatis���ݷ������ͱ�����Ĭ�ϱ�����������
+#  type-aliases-package: com.jit.jd.pojo
+
+##Mybatis  SQL��ӡ���������ڵİ�����i��Mapper.xml���ڵİ���
+#logging:
+#  level:
+#    com.xxx.jd.mapper: debug
+#
+#
+

@@ -1,7 +1,6 @@
 package com.jit.jd.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jit.jd.pojo.Order;
 import com.jit.jd.pojo.SeckillOrder;
 
 /**
