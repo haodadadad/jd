@@ -2,6 +2,7 @@ package com.jit.jd.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jit.jd.exception.GlobalException;
 import com.jit.jd.mapper.GoodsMapper;
@@ -13,6 +14,8 @@ import com.jit.jd.pojo.User;
 import com.jit.jd.service.IOrderService;
 import com.jit.jd.service.ISeckillGoodsService;
 import com.jit.jd.service.ISeckillOrderService;
+import com.jit.jd.utils.MD5Util;
+import com.jit.jd.utils.UUIDUtil;
 import com.jit.jd.vo.GoodsVo;
 import com.jit.jd.vo.OrderDetailVo;
 import com.jit.jd.vo.RespBeanEnum;
@@ -23,6 +26,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -49,7 +53,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Override
     @Transactional
     public Order seckill(User user, GoodsVo goods) {
-        ValueOperations valueOperations=redisTemplate.opsForValue();
+        ValueOperations valueOperations = redisTemplate.opsForValue();
 
         //秒杀商品表减库存
         SeckillGoods seckillGoods =
@@ -57,9 +61,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         seckillGoods.setStockCount(seckillGoods.getStockCount() - 1);
         boolean result = seckillGoodsService.update(new UpdateWrapper<SeckillGoods>().setSql("stock_count = stock_count - 1").eq(
                 "goods_id", goods.getId()).gt("stock_count", 0));
-        if (seckillGoods.getStockCount()<1){
+        if (seckillGoods.getStockCount() < 1) {
             //判断是否还有库存
-            valueOperations.set("isStockEmpty:"+goods.getId(),"0");
+            valueOperations.set("isStockEmpty:" + goods.getId(), "0");
             return null;
 
         }
@@ -107,5 +111,34 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         detailVo.setGoodsVo(goodsVo);
         detailVo.setOrder(order);
         return detailVo;
+    }
+
+    //获取秒杀地址
+    @Override
+    public String createPath(User user, Long goodsId) {
+        //秒杀地址加密部分存redis里，和正常地址拼接
+        String str = MD5Util.md5(UUIDUtil.uuid() + "123456");
+        redisTemplate.opsForValue().set("seckillPath:"+user.getId()+":"+goodsId,str,60,TimeUnit.SECONDS);
+        return str;
+    }
+
+    @Override
+    public boolean checkPath( User user, Long goodsId,String path) {
+        if (user == null || goodsId < 0 || StringUtils.isBlank(path)) {
+            return false;
+        }
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        //判断秒杀路径是否正确
+        String redisPath=(String)valueOperations.get("seckillPath:"+user.getId()+":"+goodsId);
+        return path.equals(redisPath);
+    }
+//校验验证码
+    @Override
+    public Boolean checkCaptcha(User user, Long goodsId, String captcha) {
+        if(user == null || goodsId < 0 || StringUtils.isBlank(captcha)){
+            return false;
+        }
+        String redisCaptcha = (String)redisTemplate.opsForValue().get("captcha:" + user.getId() + goodsId);
+        return redisCaptcha.equals(captcha);
     }
 }

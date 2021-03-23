@@ -13,18 +13,19 @@ public class RabbitMQConfigTopic {
 
     private static final String QUEUE = "seckillQueue";
     private static final String EXCHANGE = "seckillExchange";  //交换机
+
     @Bean
-    public Queue queue(){
+    public Queue queue() {
         return new Queue(QUEUE);
     }
 
     @Bean
-    public TopicExchange topicExchange(){
+    public TopicExchange topicExchange() {
         return new TopicExchange(EXCHANGE);
     }
 
     @Bean
-    public Binding binding(){
+    public Binding binding() {
         return BindingBuilder.bind(queue()).to(topicExchange()).with("seckill.#");
     }
 }
