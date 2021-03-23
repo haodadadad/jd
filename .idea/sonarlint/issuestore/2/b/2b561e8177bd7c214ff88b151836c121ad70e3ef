@@ -1,12 +1,18 @@
 
-Q	java:S1252"<This block of commented-out lines of code should be removed.(Èû‹¤
-a
-java:S1192I"LDefine a constant instead of duplicating this literal "secKillFail" 3 times.(ÚÙ\
-e
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.InitializingBean'.(åÑ¦œ
+y	java:S1165"XRename this field "EmptyStockMap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ñ½Ÿúÿÿÿÿ8û•ôï…/
+g
+java:S4488o"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ŞËñÑ8£»í…/
+]	java:S125z"<This block of commented-out lines of code should be removed.(´Û“üÿÿÿÿ8¤²¨í…/
+]	java:S125?"<This block of commented-out lines of code should be removed.(ê·ìÂşÿÿÿÿ8±¬˜í…/
 L
-java:S37400"/Provide the parametrized type for this generic.(‚Ê«8Íšä¥…/
-]
-java:S1192H"GDefine a constant instead of duplicating this literal "errmsg" 3 times.(Ü¢ÛÆ
-V	java:S1256"<This block of commented-out lines of code should be removed.(€Æ°Êûÿÿÿÿ
-V	java:S125`"<This block of commented-out lines of code should be removed.(®Íû¡ÿÿÿÿÿ
+java:S3740/"/Provide the parametrized type for this generic.(‚Ê«8£»í…/
+Y	java:S125’"<This block of commented-out lines of code should be removed.(²è·8£»í…/
+\
+java:S1596†">Replace "Collections.EMPTY_LIST" by "Collections.emptyList()".(ë…•â8š®Ûñ…/
+L
+java:S5411"*Use the primitive boolean expression here.(æÏí˜ıÿÿÿÿ8ğ…/
+L
+java:S3740u"/Provide the parametrized type for this generic.(®¶•Ë8£»í…/
+e
+java:S4488b"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ğÅÉô8à™‘ğ…/
+^	java:S125„"<This block of commented-out lines of code should be removed.(º¨¤øşÿÿÿÿ8Æ‘Ûñ…/

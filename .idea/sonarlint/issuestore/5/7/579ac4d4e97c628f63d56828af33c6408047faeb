@@ -1,0 +1,10 @@
+
+W
+java:S1854:":Remove this useless assignment to local variable "result".(²›8™‡¦π…/
+L
+java:S3740/"/Provide the parametrized type for this generic.(‚Κ«8Ί΄—ª…/
+L
+java:S37404"/Provide the parametrized type for this generic.(®¶•Λ8δέªπ…/
+H
+java:S1481:"+Remove this unused "result" local variable.(²›8™‡¦π…/
+X	java:S125C"<This block of commented-out lines of code should be removed.(ΎΠ8™‡¦π…/

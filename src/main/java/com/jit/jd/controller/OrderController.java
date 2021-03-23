@@ -1,8 +1,16 @@
 package com.jit.jd.controller;
 
 
+import com.jit.jd.pojo.User;
+import com.jit.jd.service.IOrderService;
+import com.jit.jd.vo.OrderDetailVo;
+import com.jit.jd.vo.RespBean;
+import com.jit.jd.vo.RespBeanEnum;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -17,5 +25,18 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 @RequestMapping("/order")
 public class OrderController  {
+
+    @Autowired
+    private IOrderService orderService;
+
+    @RequestMapping("/detail")
+    @ResponseBody
+    public RespBean detail(User user, @RequestParam("orderId") Long orderId){
+        if (null == user){
+            return RespBean.error(RespBeanEnum.SESSION_ERROR);
+        }
+        OrderDetailVo detailVo = orderService.detail(orderId);
+        return RespBean.success(detailVo);
+    }
 
 }

@@ -1,5 +1,7 @@
 
 W	java:S125C"<This block of commented-out lines of code should be removed.(¥Š&8Öÿß¥…/
+c
+java:S1192B"FDefine a constant instead of duplicating this literal "user:" 3 times.(æ½ÊÌ8¯Ö“Ã…/
 L
 java:S3740$"/Provide the parametrized type for this generic.(‚Ê«8Öÿß¥…/
 W	java:S125-"<This block of commented-out lines of code should be removed.(˜àÁz8ÁÂ”˜…/
