@@ -14,15 +14,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * 生成用户工具类
- * <p>
- * 乐字节：专注线上IT培训
- * 答疑老师微信：lezijie
- *
- * @author zhoubin
- * @since 1.0.0
- */
+// 生成用户工具类
+
 public class UserUtil {
 	private static void createUser(int count) throws Exception {
 		List<User> users = new ArrayList<>(count);
@@ -57,8 +50,8 @@ public class UserUtil {
 		// conn.close();
 		// System.out.println("insert to db");
 		//登录，生成userTicket
-		String urlString = "http://localhost:8080/login/doLogin";
-		File file = new File("C:\\Users\\Administrator\\Desktop\\config.txt");
+		String urlString = "http://localhost:8081/login/doLogin";
+		File file = new File("C:\\Users\\GUZHIHAO\\Desktop\\config.txt");
 		if (file.exists()) {
 			file.delete();
 		}

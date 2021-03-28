@@ -1,22 +1,22 @@
 
-U	java:S106("9Replace this use of System.out or System.err by a logger.(œ‡êü8ìÑ¬Ñ…/
-]	java:S125*"<This block of commented-out lines of code should be removed.(µİ¯„ıÿÿÿÿ8ìÑ¬Ñ…/
-p
-java:S4042?"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ8ìÑ¬Ñ…/
-\	java:S899?";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ8ìÑ¬Ñ…/
-c	java:S899B"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8ìÑ¬Ñ…/
-U	java:S106e"9Replace this use of System.out or System.err by a logger.(ÏºĞÚ8ìÑ¬Ñ…/
-U	java:S106["9Replace this use of System.out or System.err by a logger.(íÙ‡Ä8ìÑ¬Ñ…/
-U
-java:S1197P"8Move the array designator from the variable to the type.(Ñóğü8ìÑ¬Ñ…/
-b	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(÷¯´³8ìÑ¬Ñ…/
-p
-java:S2095A"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(à”ô…úÿÿÿÿ8ìÑ¬Ñ…/
-Z	java:S106a"9Replace this use of System.out or System.err by a logger.(äëüÿÿÿÿ8ìÑ¬Ñ…/
-i
-java:S1192%"GDefine a constant instead of duplicating this literal "123456" 3 times.(•ë¦ñüÿÿÿÿ8ÿû¯Ñ…/
-b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(‚†®÷8ìÑ¬Ñ…/
+U	java:S106^"9Replace this use of System.out or System.err by a logger.(ÏºĞÚ8£Í¾ì†/
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(œ‡êü8£Í¾ì†/
 I
-java:S1144h",Remove this unused private "getConn" method.(÷¯´³8ìÑ¬Ñ…/
+java:S1144a",Remove this unused private "getConn" method.(÷¯´³8£Í¾ì†/
+\	java:S8998";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ8£Í¾ì†/
+]	java:S125#"<This block of commented-out lines of code should be removed.(µİ¯„ıÿÿÿÿ8£Í¾ì†/
+p
+java:S2095:"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(à”ô…úÿÿÿÿ8£Í¾ì†/
+Z	java:S106Z"9Replace this use of System.out or System.err by a logger.(äëüÿÿÿÿ8£Í¾ì†/
+c	java:S899;"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8£Í¾ì†/
+U
+java:S1197I"8Move the array designator from the variable to the type.(Ñóğü8£Í¾ì†/
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(íÙ‡Ä8£Í¾ì†/
+p
+java:S40428"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ8£Í¾ì†/
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(‚†®÷8£Í¾ì†/
 c
-java:S1075="ARefactor your code to get this URI from a customizable parameter.(§êóÀşÿÿÿÿ8ìÑ¬Ñ…/
+java:S10756"ARefactor your code to get this URI from a customizable parameter.(ÑâŸùÿÿÿÿ8£Í¾ì†/
+i
+java:S1192"GDefine a constant instead of duplicating this literal "123456" 3 times.(•ë¦ñüÿÿÿÿ8£Í¾ì†/
+b	java:S112a"FDefine and throw a dedicated exception instead of using a generic one.(÷¯´³8£Í¾ì†/

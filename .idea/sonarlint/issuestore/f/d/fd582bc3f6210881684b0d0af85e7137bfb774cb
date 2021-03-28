@@ -1,13 +1,13 @@
 
-r
-java:S14882"\Immediately return this expression instead of assigning it to the temporary variable "list".(«ß²¶
-U
-java:S1118":Add a private constructor to hide the implicit public one.(Ÿ…½øÿÿÿÿ
 _
 java:S2147%"DCombine this catch with the one at line 35, which has the same body.(°êã§ıÿÿÿÿ
-Z
-java:S2147'"DCombine this catch with the one at line 35, which has the same body.(ï­£Ä
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Ÿ…½øÿÿÿÿ
+r
+java:S14882"\Immediately return this expression instead of assigning it to the temporary variable "list".(«ß²¶
 T
 java:S4719""9Replace charset name argument with StandardCharsets.UTF_8(°Ç½øÿÿÿÿ
 A
 java:S11687"+Return an empty collection instead of null.(¥¹ï
+Z
+java:S2147'"DCombine this catch with the one at line 35, which has the same body.(ï­£Ä

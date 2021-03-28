@@ -18,6 +18,7 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\OrderServiceImp
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\RespBeanEnum.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SecKillController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SeckillGoodsController.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\config\UserContext.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\utils\UUIDUtil.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\utils\UserUtil.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\IOrderService.java
@@ -27,6 +28,8 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\utils\CookieUtil.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\utils\MD5Util.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\OrderMapper.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\DetailVo.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\config\AccessLimitInterceptor.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\AdminLoginController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\IUserService.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\UserMapper.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\RespBean.java
@@ -50,3 +53,4 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\config\WebConfig.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\config\RedisConfig.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\ISeckillGoodsService.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\GoodsVo.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\config\AccessLimit.java

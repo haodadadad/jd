@@ -31,6 +31,7 @@ com\jit\jd\service\impl\OrderServiceImpl.class
 com\jit\jd\utils\UUIDUtil.class
 com\jit\jd\utils\CookieUtil.class
 com\jit\jd\config\AccessLimit.class
+com\jit\jd\controller\AdminLoginController.class
 com\jit\jd\controller\demo.class
 com\jit\jd\service\impl\GoodsServiceImpl.class
 com\jit\jd\config\RabbitMQConfigTopic.class

@@ -19,4 +19,5 @@ public interface GoodsMapper extends BaseMapper<Goods> {
     List<GoodsVo> findGoodsVo();
 //获取商品详情
     GoodsVo findGoodsVoByGoodsId(Long goodsId);
+    //修改秒杀详情
 }

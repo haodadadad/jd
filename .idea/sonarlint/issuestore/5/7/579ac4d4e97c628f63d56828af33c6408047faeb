@@ -1,10 +1,14 @@
 
+M
+java:S3740‚"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
 W
-java:S1854:":Remove this useless assignment to local variable "result".(Ÿ²›8™‡¦ğ…/
-L
-java:S3740/"/Provide the parametrized type for this generic.(‚Ê«8º´—ª…/
-L
-java:S37404"/Provide the parametrized type for this generic.(®¶•Ë8äİªğ…/
+java:S1854>":Remove this useless assignment to local variable "result".(Ÿ²›8ŠƒÃí†/
 H
-java:S1481:"+Remove this unused "result" local variable.(Ÿ²›8™‡¦ğ…/
-X	java:S125C"<This block of commented-out lines of code should be removed.(¾ŠĞ8™‡¦ğ…/
+java:S1481>"+Remove this unused "result" local variable.(Ÿ²›8ŠƒÃí†/
+h
+java:S2259"JA "NullPointerException" could be thrown; "redisCaptcha" is nullable here.(˜œĞ°8ŠƒÃí†/
+L
+java:S37408"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
+X	java:S125G"<This block of commented-out lines of code should be removed.(¾ŠĞ8ŠƒÃí†/
+L
+java:S37403"/Provide the parametrized type for this generic.(‚Ê«8ŠƒÃí†/

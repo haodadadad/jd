@@ -1,15 +1,14 @@
 
-r
-java:S1128"PRemove this unused import 'org.springframework.data.redis.core.ValueOperations'.(’ÿŠùøÿÿÿÿ8¶­ìï…/
-]	java:S1250"<This block of commented-out lines of code should be removed.(áÉ½Ÿüÿÿÿÿ8¸”‰î…/
-a
-java:S1128	"DRemove this unused import 'com.jit.jd.service.ISeckillOrderService'.(Ìéç8½íŒî…/
-Y
-java:S1128
-"<Remove this unused import 'com.jit.jd.service.IUserService'.(Ÿğ…8½íŒî…/
-]	java:S125!"<This block of commented-out lines of code should be removed.(—ª¥Âûÿÿÿÿ8¸”‰î…/
-L
-java:S3740"/Provide the parametrized type for this generic.(‚Ê«8½íŒî…/
-j	java:S100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÔıÀ8¸”‰î…/
-u
-java:S1128"SRemove this unused import 'org.springframework.data.redis.core.script.RedisScript'.(ÜâëÏùÿÿÿÿ8½íŒî…/
+_
+java:S1128"DRemove this unused import 'com.jit.jd.service.ISeckillOrderService'.(Ìéç8½íŒî…/
+W
+java:S1128"<Remove this unused import 'com.jit.jd.service.IUserService'.(Ÿğ…8½íŒî…/
+p
+java:S1128"PRemove this unused import 'org.springframework.data.redis.core.ValueOperations'.(’ÿŠùøÿÿÿÿ8¶­ìï…/
+s
+java:S1128"SRemove this unused import 'org.springframework.data.redis.core.script.RedisScript'.(ÜâëÏùÿÿÿÿ8½íŒî…/
+[	java:S125"<This block of commented-out lines of code should be removed.(áÉ½Ÿüÿÿÿÿ8¸”‰î…/
+[	java:S125"<This block of commented-out lines of code should be removed.(—ª¥Âûÿÿÿÿ8¸”‰î…/
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÔıÀ8¸”‰î…/
+J
+java:S3740"/Provide the parametrized type for this generic.(‚Ê«8½íŒî…/
