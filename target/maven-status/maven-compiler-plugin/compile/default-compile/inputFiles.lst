@@ -9,6 +9,7 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\rabbitmq\MQSender.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\SeckillGoodsServiceImpl.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\exception\GlobalExceptionHandler.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\ISeckillOrderService.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\RegisterController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SeckillOrderController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\SeckillOrderServiceImpl.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\UserController.java

@@ -18,6 +18,7 @@ import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 
 /**
  * <p>
@@ -99,6 +100,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             return RespBean.success();
         }
         return RespBean.error(RespBeanEnum.PASSWORD_UPDATE_FAILED);
+    }
+
+
+    @Override
+    public RespBean doRegister(Long mobile, String password,HttpServletRequest request, HttpServletResponse response) {
+        User user = new User();
+
+        if (!(userMapper.selectById(mobile)==null)){
+            return  RespBean.error(RespBeanEnum.USER_EXIST);
+        }
+
+
+
+        user.setId(mobile);
+        user.setSalt("1a2b3c4d");
+        user.setPassword(MD5Util.formPassToDBPass(password, "1a2b3c"));
+        int resuly=userMapper.insert(user);
+        System.out.println(resuly);
+        System.out.println(user);
+        return RespBean.success();
     }
 
 }

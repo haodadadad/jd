@@ -6,6 +6,7 @@ com\jit\jd\mapper\GoodsMapper.class
 com\jit\jd\service\ISeckillOrderService.class
 com\jit\jd\vo\RespBeanEnum.class
 com\jit\jd\pojo\Goods.class
+com\jit\jd\controller\RegisterController.class
 com\jit\jd\service\impl\SeckillGoodsServiceImpl.class
 com\jit\jd\service\IGoodsService.class
 com\jit\jd\controller\GoodsController.class

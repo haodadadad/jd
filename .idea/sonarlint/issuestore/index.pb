@@ -297,10 +297,6 @@ j
 :src/main/java/com/jit/jd/service/ISeckillOrderService.java,b\9\b92fee7a32c61fe845dd9c0f0b3a0db7ce6c5cce
 r
 Bsrc/main/java/com/jit/jd/service/impl/SeckillOrderServiceImpl.java,d\a\daaaa911d661dcc7005434c5f642e155b00f8290
-V
-&src/main/resources/static/js/common.js,f\8\f8a6b8e6189cae5a2f4667a039d6da9135263e8c
-K
-src/main/resources/lock.lua,3\4\34daca551caad424ba335442df28c6e95f981d8d
 j
 :.idea/libraries/Maven__com_rabbitmq_amqp_client_5_10_0.xml,2\7\278122c17b0b2fd2858bb95451ebaa8889bc143a
 u
@@ -313,8 +309,6 @@ w
 G.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_1.xml,7\7\7798d060d7514c02aa3e2b1e1b28e258d71bc7fa
 u
 E.idea/libraries/Maven__org_springframework_spring_messaging_5_3_4.xml,0\9\096547fe2c480f35e4117cfc3e5142ce738cd7fd
-L
-src/main/resources/stock.lua,a\a\aa2cc87d264364df3805c754bb341ff6dd7bb195
 `
 0src/main/java/com/jit/jd/config/AccessLimit.java,b\c\bc84e72702cd1e343083927d2b830fd4926d550e
 k
@@ -351,3 +345,9 @@ X
 (src/main/java/com/jit/jd/vo/GoodsVo.java,4\4\4428b326d049a28824e128e447d1da65d9ac241d
 `
 0src/main/java/com/jit/jd/mapper/GoodsMapper.java,a\4\a4bf6a9b59873221a22d9505c1e82f65ffd34a97
+X
+(src/main/resources/static/css/detail.css,5\0\506e1f8c589d908007b9103142ae8590a65b56e4
+W
+'src/main/resources/static/css/goods.css,8\0\80f54249838e48fd13fd57d1cea8054526fece64
+W
+'src/main/resources/static/css/login.css,8\2\82cabd2857303960b8153146cbe8cec683b300fe

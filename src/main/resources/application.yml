@@ -4,7 +4,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-    url: jdbc:mysql://localhost:3306/jd?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/jd?useUnicode=true&characterEncoding=utf8&useSSL=false&timezone=°∞GMT+8°±
     username: root
     password: 123456
     #    url: jdbc:mysql://101.32.200.73:3306/jd?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
@@ -43,7 +43,9 @@ spring:
         max-idle: 200
 
 
-
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #mybatis-plus:
 ##  #≈‰÷√Mapper.xml”≥…‰Œƒº˛

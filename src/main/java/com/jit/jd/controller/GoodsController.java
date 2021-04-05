@@ -61,6 +61,45 @@ public class GoodsController {
         }
         return html;
     }
+//跳转管理员列表页
+    @RequestMapping("/toAdminList")
+    public String toList( Model model,User user) {
+        model.addAttribute("user", user);
+        model.addAttribute("goodsList",goodsService.findGoodsVo());
+        return "adminList";
+    }
+
+    //跳转管理员更新页
+    //跳转商品详情页
+    @RequestMapping("/toUpdateDetail/{goodsId}")
+    public String toDetail(Model model, User user, @PathVariable Long goodsId){
+        model.addAttribute("user",user);
+        GoodsVo goodsVo=goodsService.findGoodsVoByGoodsId(goodsId);
+        //抢购时间判断
+        Date startDate=goodsVo.getStartDate();
+        Date endDate=goodsVo.getEndDate();
+        Date nowDate=new Date();
+        //秒杀状态
+        int secKillStatus=0;
+        //秒杀倒计时
+        int remainSeconds=0;
+        //秒杀还未开始
+        if (nowDate.before(startDate)){
+            remainSeconds=((int)((startDate.getTime()-nowDate.getTime())/1000));
+
+        }else if (nowDate.after(endDate)){
+            //秒杀已结束
+            secKillStatus=2;
+            remainSeconds=-1;
+        }else {
+            secKillStatus=1;
+            remainSeconds=0;
+        }
+        model.addAttribute("remainSeconds",remainSeconds);
+        model.addAttribute("secKillStatus",secKillStatus);
+        model.addAttribute("goods",goodsVo);
+        return "updateDetail";
+    }
 
     //跳转商品详情页
     @RequestMapping(value = "/toDetail2/{goodsId}", produces = "text/html;charset=utf-8")

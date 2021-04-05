@@ -1,31 +1,31 @@
 
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(´Û“üÿÿÿÿ8¤²¨í…/
 a
 java:S1854¾"CRemove this useless assignment to local variable "valueOperations".(®¶•Ë8÷çı…/
-M
-java:S5411"*Use the primitive boolean expression here.(æÏí˜ıÿÿÿÿ8ğ…/
-R
-java:S1481¾"4Remove this unused "valueOperations" local variable.(®¶•Ë8÷çı…/
-M
-java:S3740¾"/Provide the parametrized type for this generic.(®¶•Ë8ØÎ¿ı…/
-l
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8Â¹œ÷…/
-g
-java:S4488v"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûÎ¢é8£»í…/
-Y	java:S125 "<This block of commented-out lines of code should be removed.(²è·8£»í…/
-f
-java:S4488é"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ññ‘Ö8‡òòü…/
-y	java:S116="XRename this field "EmptyStockMap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ñ½Ÿúÿÿÿÿ8û•ôï…/
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(´Û“üÿÿÿÿ8¤²¨í…/
-k
-java:S4488¸"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÿúëûÿÿÿÿÿ8İ¤œ÷…/
-]	java:S125G"<This block of commented-out lines of code should be removed.(ê·ìÂşÿÿÿÿ8±¬˜í…/
-Y	java:S125À"<This block of commented-out lines of code should be removed.(äÓá’8÷çı…/
-L
-java:S3740}"/Provide the parametrized type for this generic.(®¶•Ë8¢óøø…/
-Y	java:S125”"<This block of commented-out lines of code should be removed.(¬µäÇ8ªóó…/
 e
 java:S4488j"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ğÅÉô8à™‘ğ…/
+y	java:S116="XRename this field "EmptyStockMap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ñ½Ÿúÿÿÿÿ8û•ôï…/
+Y	java:S125À"<This block of commented-out lines of code should be removed.(äÓá’8÷çı…/
 L
 java:S37407"/Provide the parametrized type for this generic.(‚Ê«8£»í…/
+M
+java:S3740¾"/Provide the parametrized type for this generic.(®¶•Ë8ØÎ¿ı…/
 H
 java:S5411Î"*Use the primitive boolean expression here.(Ùç„×8ƒı…/
+Y	java:S125 "<This block of commented-out lines of code should be removed.(²è·8£»í…/
+M
+java:S5411"*Use the primitive boolean expression here.(æÏí˜ıÿÿÿÿ8ğ…/
+k
+java:S4488¸"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÿúëûÿÿÿÿÿ8İ¤œ÷…/
+R
+java:S1481¾"4Remove this unused "valueOperations" local variable.(®¶•Ë8÷çı…/
+L
+java:S3740}"/Provide the parametrized type for this generic.(®¶•Ë8¢óøø…/
+g
+java:S4488v"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûÎ¢é8£»í…/
+l
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8Â¹œ÷…/
+]	java:S125G"<This block of commented-out lines of code should be removed.(ê·ìÂşÿÿÿÿ8±¬˜í…/
+Y	java:S125”"<This block of commented-out lines of code should be removed.(¬µäÇ8ªóó…/
+f
+java:S4488é"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ññ‘Ö8‡òòü…/

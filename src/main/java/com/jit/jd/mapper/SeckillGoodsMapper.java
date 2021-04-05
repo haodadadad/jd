@@ -2,6 +2,7 @@ package com.jit.jd.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jit.jd.pojo.SeckillGoods;
+import com.jit.jd.vo.GoodsVo;
 
 /**
  * <p>
@@ -12,5 +13,6 @@ import com.jit.jd.pojo.SeckillGoods;
  * @since 2021-03-18
  */
 public interface SeckillGoodsMapper extends BaseMapper<SeckillGoods> {
+
 
 }

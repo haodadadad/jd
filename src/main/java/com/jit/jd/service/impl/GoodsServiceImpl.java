@@ -7,6 +7,7 @@ import com.jit.jd.service.IGoodsService;
 import com.jit.jd.vo.GoodsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,4 +35,9 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
         return goodsMapper.findGoodsVoByGoodsId(goodsId);
     }
 
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public int update(GoodsVo goods) {
+        return goodsMapper.update(goods);
+    }
 }

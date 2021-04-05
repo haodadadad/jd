@@ -31,5 +31,7 @@ public interface IUserService extends IService<User> {
     RespBean updatePassword(String userTicket, String password, HttpServletRequest request,
                             HttpServletResponse response);
 
+
+    RespBean doRegister(Long mobile, String password, HttpServletRequest request, HttpServletResponse response);
 }
 

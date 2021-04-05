@@ -57,4 +57,14 @@ LEFT JOIN t_seckill_goods AS sg ON g.id = sg.goods_id
 WHERE
 	g.id = #{goodsId}
 </select>
+
+    <update id="update" parameterType="com.jit.jd.vo.GoodsVo">
+        UPDATE t_goods g
+        LEFT JOIN t_seckill_goods AS sg ON g.id = sg.goods_id
+        set sg.seckill_price = #{seckillPrice},
+        sg.stock_count = #{stockCount},
+        sg.start_date = #{startDate},
+        sg.end_date = #{endDate}
+        WHERE g.id= #{id}
+    </update>
 </mapper>

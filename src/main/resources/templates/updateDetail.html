@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <!-- jquery -->
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <!-- layer -->
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <!-- common.js -->
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+</head>
+<body>
+<div class="panel panel-default">
+    <div class="panel-heading">秒杀商品详情</div>
+    <div class="panel-body">
+        <span th:if="${user eq null}"> 您还没有登录，请登陆后再操作<br/></span>
+        <span>没有收货地址的提示。。。</span>
+    </div>
+    <form id="order" th:action="@{/seckillGoods/update}" method="post" th:object="${goods}" enctype="multipart/form-data"  >
+    <table class="table" id="goods">
+        <input type="hidden" name="id" id="id" th:value="${goods.id}"/>
+        <tr>
+            <td>商品名称</td>
+            <td colspan="3" th:text="${goods.goodsName}"></td>
+        </tr>
+        <tr>
+            <td>商品图片</td>
+            <td colspan="3"><img th:src="@{${goods.goodsImg}}" width="200" height="200"/></td>
+        </tr>
+        <tr>
+            <td>秒杀开始时间</td>
+            <td th:text="${#dates.format(goods.startDate,'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td id="seckillTip">
+                <input type="hidden" id="remainSeconds" th:value="${remainSeconds}">
+                <span th:if="${secKillStatus eq 0}">秒杀倒计时: <span id="countDown" th:text="${remainSeconds}"></span>秒
+                </span>
+                <span th:if="${secKillStatus eq 1}">秒杀进行中</span>
+                <span th:if="${secKillStatus eq 2}">秒杀已结束</span>
+            </td>
+            <td>
+                <form id="secKillForm" method="post" action="/seckill/doSeckill">
+                    <input type="hidden" name="goodsId" th:value="${goods.id}">
+                    <button class="btn btn-primary btn-block" type="submit" id="buyButton">立即秒杀</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>商品原价</td>
+            <td colspan="3" th:text="${goods.goodsPrice}"></td>
+        </tr>
+        <tr>
+            <td>设置秒杀库存</td>
+            <td><input id="stockCount" name="stockCount" class="form-control" type="number" placeholder="秒杀库存"
+                       min="0" required="true" th:value="${goods.stockCount}" /></td>
+        </tr>
+        <tr>
+            <td>设置秒杀价格</td>
+            <td><input id="price" name="seckillPrice" class="form-control" type="number" placeholder="秒杀价格"
+                       min="0" required="true"  th:value="${goods.seckillPrice}" /></td>
+        </tr>
+        <tr>
+            <td>设置抢购开始时间</td>
+            <td><input id="updateStart" name="startDate" type="datetime-local" th:value="${#dates.format(goods.startDate,'yyyy-MM-dd')+'T'+#dates.format(goods.startDate,'HH:mm:ss')}" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>设置抢购结束时间</td>
+            <td><input id="updateEnd" name="endDate" type="datetime-local" th:value="${#dates.format(goods.endDate,'yyyy-MM-dd')+'T'+#dates.format(goods.endDate,'HH:mm:ss')}" required="true"/></td>
+        </tr>
+       </table>
+        <button type="button" onclick="sendOrder()">修改</button>
+    </form>
+</div>
+</body>
+<script>
+    // function sendOrder() {
+    //
+    //     x = $("#updateStart").val();
+    //     y = $("#updateEnd").val();
+    //     var date = new Date(+new Date(x)+8*3600*1000).toISOString().replace(/T/g,' ').replace(/\.[\d]{3}Z/,'');
+    //
+    //     var date1 = new Date(+new Date(y)+8*3600*1000).toISOString().replace(/T/g,' ').replace(/\.[\d]{3}Z/,'');
+    //     var formData = $("#order").serializeArray();
+    //   //  将序列化数据转为对象
+    //         var formObject = {};
+    //         for (var item in formData) {
+    //             formObject[formData[item].name] = formData[item].value;
+    //         }
+    //         formObject.startDate = date;
+    //         formObject.endDate = date1;
+    //
+    //         var formJSON = JSON.stringify(formObject);
+    //     $.ajax({
+    //                 type: "POST",
+    //                 url: "/seckillGoods/update",
+    //                 contentType: "application/json",  //一定要设置这一行，很关键
+    //                 data: formJSON,
+    //                 datatype: "json",
+    //                 success: function (data) {
+    //                     alert(JSON.stringify(data));
+    //                 }
+    //             });
+    // }
+
+    //将日期格式化为两位，不足补零
+    function fix(num, length) {
+        return ('' + num).length < length ? ((new Array(length + 1)).join('0') + num).slice(-length) : '' + num;
+    }
+
+    //发送订单
+    function sendOrder() {
+        //将datetime-local转换为Date
+        console.log("zhixingle")
+        x = $("#updateStart").val();
+        y = $("#updateEnd").val();
+        //
+        // now.setFullYear(parseInt(x.substring(0, 4)));
+        // now.setMonth(parseInt(x.substring(5, 7)) - 1);
+        // now.setDate(parseInt(x.substring(8, 10)));
+        // now.setHours(parseInt(x.substring(11, 13)));
+        // now.setMinutes(parseInt(x.substring(14, 16)));
+        // now.setSeconds(parseInt((x.substring(17,19))));
+        //
+        // now1.setFullYear(parseInt(y.substring(0, 4)));
+        // now1.setMonth(parseInt(y.substring(5, 7)) - 1);
+        // now1.setDate(parseInt(y.substring(8, 10)));
+        // now1.setHours(parseInt(y.substring(11, 13)));
+        // now1.setMinutes(parseInt(y.substring(14, 16)));
+        // now1.setSeconds(parseInt((y.substring(17,19))));
+
+
+        //获取表单数据，并序列化
+        var formData = $("#order").serializeArray();
+
+        //将序列化数据转为对象
+        var formObject = {};
+        for (var item in formData) {
+            formObject[formData[item].name] = formData[item].value;
+        }
+        formObject.startDate = x;
+        formObject.endDate = y;
+
+        var formJSON = JSON.stringify(formObject);
+
+        //发送JSON到服务器
+        $.ajax({
+            type: "POST",
+            url: "/seckillGoods/update",
+            contentType: "application/json",  //一定要设置这一行，很关键
+            data: formJSON,
+            datatype: "json",
+            success: function (data) {
+                alert(JSON.stringify(data));
+            }
+        });
+    }
+
+
+    $(function () {
+        countDown();
+    });
+
+    function countDown() {
+        var remainSeconds = $("#remainSeconds").val();
+        var timeout;
+        //秒杀还未开始
+        if (remainSeconds > 0) {
+            $("#buyButton").attr("disabled", true);
+            timeout = setTimeout(function () {
+                $("#countDown").text(remainSeconds - 1);
+                $("#remainSeconds").val(remainSeconds - 1);
+                countDown();
+            }, 1000);
+            // 秒杀进行中
+        } else if (remainSeconds == 0) {
+            $("#buyButton").attr("disabled", false);
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            $("#seckillTip").html("秒杀进行中")
+        } else {
+            $("#buyButton").attr("disabled", true);
+            $("#seckillTip").html("秒杀已经结束");
+        }
+    };
+
+</script>
+</html>
