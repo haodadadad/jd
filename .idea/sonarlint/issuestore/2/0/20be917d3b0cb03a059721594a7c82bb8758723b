@@ -1,6 +1,4 @@
 
-`
-java:S1128"DRemove this unused import 'com.jit.jd.service.ISeckillGoodsService'.(ß„Ær8ş§²¸‰/
 z
 java:S1128"XRemove this unused import 'com.baomidou.mybatisplus.core.conditions.query.QueryWrapper'.(ÓÆÂæÿÿÿÿÿ8âƒË·‰/
 u
@@ -9,4 +7,5 @@ T
 java:S1128"2Remove this unused import 'com.jit.jd.pojo.Goods'.(ËİÁüÿÿÿÿ8ş´¿·‰/
 V
 java:S1128"9Remove this unused import 'com.jit.jd.pojo.SeckillGoods'.(…„Ò8Îê·‰/
-X	java:S1251"<This block of commented-out lines of code should be removed.(óÀöñ8ÅòËº‰/
+`
+java:S1128"DRemove this unused import 'com.jit.jd.service.ISeckillGoodsService'.(ß„Ær8ş§²¸‰/

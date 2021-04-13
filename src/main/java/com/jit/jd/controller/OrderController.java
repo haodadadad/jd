@@ -1,6 +1,8 @@
 package com.jit.jd.controller;
 
 
+import com.jit.jd.mapper.OrderMapper;
+import com.jit.jd.pojo.Order;
 import com.jit.jd.pojo.User;
 import com.jit.jd.service.IOrderService;
 import com.jit.jd.vo.OrderDetailVo;
@@ -8,6 +10,7 @@ import com.jit.jd.vo.RespBean;
 import com.jit.jd.vo.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,5 +41,24 @@ public class OrderController  {
         OrderDetailVo detailVo = orderService.detail(orderId);
         return RespBean.success(detailVo);
     }
+
+    @RequestMapping("/payOrder")
+    @ResponseBody
+    public RespBean payOrder(User user, @RequestParam("orderId") Long orderId){
+        if (null == user){
+            return RespBean.error(RespBeanEnum.SESSION_ERROR);
+        }
+       orderService.payOrder(user, orderId);
+        return RespBean.success();
+    }
+
+    //订单列表页
+    @RequestMapping("/toOrderList")
+    public String toList(Model model, User user) {
+        model.addAttribute("user", user);
+        model.addAttribute("orderList",orderService.findOrderVo());
+        return "orderList";
+    }
+
 
 }

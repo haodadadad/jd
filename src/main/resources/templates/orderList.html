@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>订单列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- jquery -->
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <!-- jquery-validator -->
+    <script type="text/javascript" th:src="@{/jquery-validation/jquery.validate.min.js}"></script>
+    <script type="text/javascript" th:src="@{/jquery-validation/localization/messages_zh.min.js}"></script>
+    <!-- layer -->
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <!-- md5.js -->
+    <script type="text/javascript" th:src="@{/js/md5.min.js}"></script>
+    <!-- common.js -->
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background: url('/img/bg2.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #goodslist td {
+            border-top: 1px solid #39503f61;
+        }
+    </style>
+</head>
+<body>
+
+<div class="panel panel-default" style="height:100%;background-color:rgba(222,222,222,0.8)">
+    <div class="panel-heading">订单列表</div>
+    <table class="table" id="orderlist">
+        <tr>
+            <td>商品名称</td>
+            <td>商品图片</td>
+            <td>价格</td>
+            <td>下单时间</td>
+            <td>状态</td>
+            <td>数量</td>
+        </tr>
+        <tr th:each="order,orderStat : ${orderList}">
+            <td th:text="${order.goodsName}"></td>
+            <td><img th:src="@{${order.goodsImg}}" width="100" height="100"/></td>
+            <td th:text="${order.goodsPrice}"></td>
+            <td th:text="${#dates.format(order.createDate ,'yyyy-MM-dd HH:mm:ss')}"></td>
+
+            <td th:switch="${order.status}">
+                <p th:case="'0'">待付款</p>
+                <p th:case="'1'">待发货</p>
+                <p th:case="'2'">已发货</p>
+                <p th:case="'3'">已收货</p>
+                <p th:case="'4'">已退款</p>
+                <p th:case="'5'">已完成</p>
+                <!-- *: case的默认的选项 -->
+                <p th:case="*">错误</p>
+            </td>
+
+            <td th:text="${order.goodsCount}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>

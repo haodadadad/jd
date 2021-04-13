@@ -5,6 +5,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.jit.jd.pojo.User;
 import com.jit.jd.vo.GoodsVo;
 import com.jit.jd.vo.OrderDetailVo;
+import com.jit.jd.vo.OrderVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -25,4 +28,9 @@ public interface IOrderService extends IService<Order> {
     boolean checkPath( User user, Long goodsId,String path);
 //校验验证码
     Boolean checkCaptcha(User user, Long goodsId, String captcha);
+
+    Order payOrder(User user, Long orderId);
+
+
+    List<OrderVo> findOrderVo();
 }

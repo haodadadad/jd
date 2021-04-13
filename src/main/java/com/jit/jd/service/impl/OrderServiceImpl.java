@@ -18,6 +18,7 @@ import com.jit.jd.utils.MD5Util;
 import com.jit.jd.utils.UUIDUtil;
 import com.jit.jd.vo.GoodsVo;
 import com.jit.jd.vo.OrderDetailVo;
+import com.jit.jd.vo.OrderVo;
 import com.jit.jd.vo.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -26,6 +27,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -140,5 +142,18 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         }
         String redisCaptcha = (String)redisTemplate.opsForValue().get("captcha:" + user.getId() + goodsId);
         return redisCaptcha.equals(captcha);
+    }
+//支付订单
+    @Override
+    public Order payOrder(User user, Long orderId) {
+        Order order=new Order();
+        order.setStatus(1);
+        orderMapper.updateById(order);
+        return order;
+    }
+//返回订单列表
+    @Override
+    public List<OrderVo> findOrderVo() {
+        return orderMapper.findOrderVo();
     }
 }

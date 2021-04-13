@@ -1,4 +1,5 @@
 com\jit\jd\vo\LoginVo.class
+com\jit\jd\vo\OrderVo.class
 com\jit\jd\exception\GlobalException.class
 com\jit\jd\validator\IsMobileValidator.class
 com\jit\jd\mapper\SeckillOrderMapper.class
@@ -33,7 +34,6 @@ com\jit\jd\utils\UUIDUtil.class
 com\jit\jd\utils\CookieUtil.class
 com\jit\jd\config\AccessLimit.class
 com\jit\jd\controller\AdminLoginController.class
-com\jit\jd\controller\demo.class
 com\jit\jd\service\impl\GoodsServiceImpl.class
 com\jit\jd\config\RabbitMQConfigTopic.class
 com\jit\jd\controller\SeckillOrderController.class

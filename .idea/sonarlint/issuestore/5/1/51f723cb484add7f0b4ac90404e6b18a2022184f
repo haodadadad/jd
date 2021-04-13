@@ -1,9 +1,9 @@
 
 U	java:S106)"9Replace this use of System.out or System.err by a logger.(ÊäïÂ8‡‡Ëü‚/
-Z	java:S106("9Replace this use of System.out or System.err by a logger.(ò‡Œûûÿÿÿÿ8Ìó±ü‚/
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯ô«ç8¨„ü‚/
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(¶–Ä”8š¡Ïü‚/
 g
 java:S1192)"JUse already-defined constant 'salt' instead of duplicating its value here.(ÊäïÂ8‡‡Ëü‚/
 €
 java:S1488!"^Immediately return this expression instead of assigning it to the temporary variable "dbPass".(ÏôãÖıÿÿÿÿ8é¸šü‚/
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯ô«ç8¨„ü‚/
-U	java:S106*"9Replace this use of System.out or System.err by a logger.(¶–Ä”8š¡Ïü‚/
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(ò‡Œûûÿÿÿÿ8Ìó±ü‚/
