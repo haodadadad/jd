@@ -146,8 +146,10 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 //支付订单
     @Override
     public Order payOrder(User user, Long orderId) {
-        Order order=new Order();
+        Order order=orderMapper.selectById(orderId);
+
         order.setStatus(1);
+        order.setPayDate(new Date());
         orderMapper.updateById(order);
         return order;
     }
@@ -155,5 +157,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Override
     public List<OrderVo> findOrderVo() {
         return orderMapper.findOrderVo();
+    }
+
+    @Override
+    public Order sendOrder(Long orderId) {
+        Order order=orderMapper.selectById(orderId);
+        order.setStatus(2);
+        orderMapper.updateById(order);
+        return order;
     }
 }

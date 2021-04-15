@@ -11,10 +11,7 @@ import com.jit.jd.vo.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -48,6 +45,7 @@ public class OrderController  {
         if (null == user){
             return RespBean.error(RespBeanEnum.SESSION_ERROR);
         }
+
        orderService.payOrder(user, orderId);
         return RespBean.success();
     }
@@ -58,6 +56,15 @@ public class OrderController  {
         model.addAttribute("user", user);
         model.addAttribute("orderList",orderService.findOrderVo());
         return "orderList";
+    }
+
+
+    @RequestMapping("/sendOrder")
+
+    public RespBean sendOrder( @RequestParam ("orderId") Long orderId){
+        System.out.println("orderid"+orderId);
+        orderService.sendOrder(orderId);
+        return RespBean.success();
     }
 
 

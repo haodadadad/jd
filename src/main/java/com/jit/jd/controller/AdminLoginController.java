@@ -25,7 +25,7 @@ public class AdminLoginController {
 
     @RequestMapping("/toAdminLogin")
     public String toLogin(){
-        return "adminLogin";
+        return "admin/adminLogin";
     }
 
 

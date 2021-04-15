@@ -2,6 +2,7 @@ package com.jit.jd.controller;
 
 import com.jit.jd.pojo.User;
 import com.jit.jd.service.IGoodsService;
+import com.jit.jd.service.IOrderService;
 import com.jit.jd.service.IUserService;
 import com.jit.jd.vo.DetailVo;
 import com.jit.jd.vo.GoodsVo;
@@ -31,6 +32,8 @@ public class GoodsController {
     private IUserService userService;
     @Autowired
     private IGoodsService goodsService;
+    @Autowired
+    private IOrderService orderService;
     @Autowired
     private RedisTemplate redisTemplate;
     @Autowired
@@ -66,7 +69,14 @@ public class GoodsController {
     public String toList( Model model,User user) {
         model.addAttribute("user", user);
         model.addAttribute("goodsList",goodsService.findGoodsVo());
-        return "adminList";
+        return "admin/adminList";
+    }
+//跳转后台管理页面
+    @RequestMapping("/toAdminListLink")
+    public String toLinkList( Model model,User user) {
+        model.addAttribute("user", user);
+        model.addAttribute("goodsList",goodsService.findGoodsVo());
+        return "admin/adminListLink";
     }
 
     //跳转管理员更新页
@@ -98,7 +108,7 @@ public class GoodsController {
         model.addAttribute("remainSeconds",remainSeconds);
         model.addAttribute("secKillStatus",secKillStatus);
         model.addAttribute("goods",goodsVo);
-        return "updateDetail";
+        return "admin/updateDetail";
     }
 
     //跳转商品详情页
@@ -181,5 +191,13 @@ public class GoodsController {
         return RespBean.success(detailVo);
 
 
+    }
+
+
+    //订单列表页
+    @RequestMapping("/toAdminOrderList")
+    public String toAdminList(Model model) {
+        model.addAttribute("orderList",orderService.findOrderVo());
+        return "admin/adminOrderList";
     }
 }
