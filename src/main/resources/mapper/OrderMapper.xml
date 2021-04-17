@@ -44,4 +44,23 @@ ORDER BY
 	o.id
   </select>
 
+    <select id="findUserOrderVo" resultType="com.jit.jd.vo.OrderVo">
+    SELECT
+    o.id,
+    g.goods_name,
+    g.goods_img,
+    g.goods_detail,
+    o.create_date,
+    o.user_id,
+    o.delivery_addr_id,
+    o.pay_date,
+    o.`status`,
+    o.goods_count,
+    o.goods_price
+    FROM
+    t_goods g
+    RIGHT JOIN t_order AS o ON g.id = o.goods_id
+    WHERE o.user_id=#{userId}
+    </select>
+
 </mapper>

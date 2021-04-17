@@ -166,4 +166,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         orderMapper.updateById(order);
         return order;
     }
+
+    @Override
+    public List<OrderVo> findUserOrderVo(Long userId) {
+        return orderMapper.findUserOrderVo(userId);
+    }
 }

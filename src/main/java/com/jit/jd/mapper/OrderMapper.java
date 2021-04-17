@@ -18,5 +18,5 @@ import java.util.List;
 public interface OrderMapper extends BaseMapper<Order> {
     //获取订单列表
     List<OrderVo> findOrderVo();
-
+    List<OrderVo> findUserOrderVo(Long userId);
 }

@@ -1,19 +1,19 @@
 
-L
-java:S3740x"/Provide the parametrized type for this generic.(®¶•Ë8ØŠÊ´‰/
-g
-java:S11921"JDefine a constant instead of duplicating this literal "goodsList" 6 times.(¾ÈÏ½8½¢¢Â…/
-Q
-java:S1874>"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
 Q
 java:S1874z"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
-Q
-java:S18742"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
 L
 java:S3740&"/Provide the parametrized type for this generic.(‚Ê«8½¢¢Â…/
 L
 java:S37400"/Provide the parametrized type for this generic.(®¶•Ë8½¢¢Â…/
+X	java:S1259"<This block of commented-out lines of code should be removed.(’È…8½¢¢Â…/
+L
+java:S3740x"/Provide the parametrized type for this generic.(®¶•Ë8ØŠÊ´‰/
+g
+java:S11921"JDefine a constant instead of duplicating this literal "goodsList" 6 times.(¾ÈÏ½8½¢¢Â…/
+Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ë‚œ™8ØŠÊ´‰/
 R
 java:S1874›"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
-X	java:S1259"<This block of commented-out lines of code should be removed.(’È…8½¢¢Â…/
-Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ë‚œ™8ØŠÊ´‰/
+Q
+java:S18742"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
+Q
+java:S1874>"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/

@@ -59,6 +59,18 @@ public class OrderController  {
     }
 
 
+    //用户订单列表页
+    @RequestMapping("/toUserOrderList/{userId}")
+    public String toUserList(Model model, User user,@PathVariable Long userId) {
+        model.addAttribute("user", user);
+        model.addAttribute("userOrderList",orderService.findUserOrderVo(userId));
+        return "userOrderList";
+    }
+
+
+
+
+
     @RequestMapping("/sendOrder")
 
     public RespBean sendOrder( @RequestParam ("orderId") Long orderId){
