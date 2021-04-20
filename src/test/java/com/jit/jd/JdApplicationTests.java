@@ -1,5 +1,6 @@
 package com.jit.jd;
 
+import com.jit.jd.mapper.AddressMapper;
 import com.jit.jd.mapper.UserMapper;
 import com.jit.jd.pojo.User;
 import org.junit.jupiter.api.Test;
@@ -64,6 +65,7 @@ private RedisTemplate redisTemplate;
             System.out.println("有线程在使用，请稍后");
         }
     }
+
 
 
 }

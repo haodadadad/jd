@@ -2,7 +2,9 @@ package com.jit.jd.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jit.jd.exception.GlobalException;
+import com.jit.jd.mapper.AddressMapper;
 import com.jit.jd.mapper.UserMapper;
+import com.jit.jd.pojo.Address;
 import com.jit.jd.pojo.User;
 import com.jit.jd.service.IUserService;
 import com.jit.jd.utils.CookieUtil;
@@ -35,6 +37,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private UserMapper userMapper;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private AddressMapper addressMapper;
 
 
     //登录
@@ -120,6 +124,27 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         System.out.println(resuly);
         System.out.println(user);
         return RespBean.success();
+    }
+
+    @Override
+    public String setUserInfo(Long userId, String address, String name, String phone, HttpServletRequest request, HttpServletResponse response) {
+        Address address1=new Address();
+        address1.setId(userId);
+        address1.setAddress(address);
+        address1.setName(name);
+        address1.setPhone(phone);
+
+        int resout= addressMapper.insert(address1);
+        System.out.println(resout);
+        if(resout == 1){
+            return "redirect:/goods/toList";
+        }else {
+            return null;
+        }
+
+
+
+
     }
 
 }

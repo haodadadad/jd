@@ -33,5 +33,9 @@ public interface IUserService extends IService<User> {
 
 
     RespBean doRegister(Long mobile, String password, HttpServletRequest request, HttpServletResponse response);
+
+    String setUserInfo(Long userId, String address, String name, String phone, HttpServletRequest request, HttpServletResponse response);
+
+
 }
 

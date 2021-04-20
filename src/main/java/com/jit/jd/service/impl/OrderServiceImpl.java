@@ -5,12 +5,10 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jit.jd.exception.GlobalException;
+import com.jit.jd.mapper.AddressMapper;
 import com.jit.jd.mapper.GoodsMapper;
 import com.jit.jd.mapper.OrderMapper;
-import com.jit.jd.pojo.Order;
-import com.jit.jd.pojo.SeckillGoods;
-import com.jit.jd.pojo.SeckillOrder;
-import com.jit.jd.pojo.User;
+import com.jit.jd.pojo.*;
 import com.jit.jd.service.IOrderService;
 import com.jit.jd.service.ISeckillGoodsService;
 import com.jit.jd.service.ISeckillOrderService;
@@ -51,6 +49,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private GoodsMapper goodsMapper;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private AddressMapper addressMapper;
 
     @Override
     @Transactional
@@ -109,9 +109,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         }
         Order order = orderMapper.selectById(orderId);
         GoodsVo goodsVo = goodsMapper.findGoodsVoByGoodsId(order.getGoodsId());
+        Address address=addressMapper.selectById(order.getUserId());
         OrderDetailVo detailVo = new OrderDetailVo();
         detailVo.setGoodsVo(goodsVo);
         detailVo.setOrder(order);
+        detailVo.setAddress(address);
         return detailVo;
     }
 

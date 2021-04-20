@@ -1,6 +1,7 @@
 package com.jit.jd.vo;
 
 
+import com.jit.jd.pojo.Address;
 import com.jit.jd.pojo.Order;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,4 +13,5 @@ import lombok.NoArgsConstructor;
 public class OrderDetailVo {
     private GoodsVo goodsVo;
     private Order order;
+    private Address address;
 }

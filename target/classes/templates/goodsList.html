@@ -16,6 +16,7 @@
 <div class="seckill_content">
     <div class="title"><h2>秒杀商品列表</h2></div>
     <a th:href="@{'/order/toUserOrderList/'+${user.id}}">用户订单列表</a>
+    <a href="/user/userInfo">设置收货信息</a>
     <div class="all_seckill_goods">
         <div class="seckill_goods" th:each="goods,goodsStat : ${goodsList}">
             <h4 th:text="${goods.goodsName}"></h4>

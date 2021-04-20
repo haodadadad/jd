@@ -1,13 +1,14 @@
 
 L
-java:S3740%"/Provide the parametrized type for this generic.(‚Ê«8Öÿß¥…/
-W	java:S125D"<This block of commented-out lines of code should be removed.(¥Š&8Öÿß¥…/
-Z	java:S106x"9Replace this use of System.out or System.err by a logger.(¦îÁıÿÿÿÿ8† «–Š/
-U	java:S106y"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8† «–Š/
-W	java:S125."<This block of commented-out lines of code should be removed.(˜àÁz8ÁÂ”˜…/
-c
-java:S1192C"FDefine a constant instead of duplicating this literal "user:" 3 times.(æ½ÊÌ8¯Ö“Ã…/
-F
-java:S1940n")Use the opposite operator ("!=") instead.(·ô”Ú8ê†­‘Š/
+java:S3740'"/Provide the parametrized type for this generic.(‚Ê«8Öÿß¥…/
+Z	java:S106|"9Replace this use of System.out or System.err by a logger.(¦îÁıÿÿÿÿ8† «–Š/
 P
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÿÁ£‘Š/
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÿÁ£‘Š/
+c
+java:S1192G"FDefine a constant instead of duplicating this literal "user:" 3 times.(æ½ÊÌ8¯Ö“Ã…/
+W	java:S1252"<This block of commented-out lines of code should be removed.(˜àÁz8ÁÂ”˜…/
+U	java:S106}"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8† «–Š/
+[	java:S106Š"9Replace this use of System.out or System.err by a logger.(¡İÏÇÿÿÿÿÿ8éê÷£/
+W	java:S125H"<This block of commented-out lines of code should be removed.(¥Š&8Öÿß¥…/
+F
+java:S1940r")Use the opposite operator ("!=") instead.(·ô”Ú8ê†­‘Š/

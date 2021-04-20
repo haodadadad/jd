@@ -367,8 +367,6 @@ U
 %target/classes/mapper/OrderMapper.xml,a\a\aa7f6451a5b673caafb419abcb865fc02ba9a679
 ]
 -target/classes/templates/admin/adminList.html,b\5\b5b0f3d075775b1a8455d8a89df6df90c80f3624
-e
-5src/main/resources/templates/admin/adminListLink.html,8\1\816daad31cfbc45f2b3ab2dfc11712f8233865e7
 a
 1target/classes/templates/admin/adminListLink.html,c\f\cf641ba6f6a726f2b36f700cf052b542b57da4ac
 ^
@@ -443,3 +441,11 @@ k
 ;target/classes/static/assets/js/morris/raphael-2.1.0.min.js,e\4\e4c4ffc5a5e2015702f40bfe15da695c584279f1
 `
 0target/classes/templates/admin/updateDetail.html,8\9\89e315920bee627a30e245b1fd5c73d1d39cb539
+W
+'target/classes/templates/goodsList.html,a\1\a1677c5b8b5883ac94d6880e9716070bc79a02ad
+[
++target/classes/templates/userOrderList.html,9\d\9d8c9194f7949abcec7b01e432a96ef7fcb37a8d
+b
+2src/main/java/com/jit/jd/mapper/AddressMapper.java,c\c\cc9ff141b4c67c85b64f240b3f4b4eff245db330
+Z
+*src/main/java/com/jit/jd/pojo/Address.java,f\2\f238422531217c1ae64f2cdda681347f8e667b02

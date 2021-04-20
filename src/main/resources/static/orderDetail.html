@@ -47,11 +47,15 @@
             </div>
             <div class="count">
                 <span>收货人：</span>
-                <span>XXX  1383838483</span>
+               <span id="name"></span>
+            </div>
+            <div class="count">
+                <span>手机号：</span>
+                <span id="phone"></span>
             </div>
             <div class="count">
                 <span>收货地址：</span>
-                <span>南京市昌平区回龙观龙博一区</span>
+               <span id="address"></span>
 
             </div>
             <button class="btn btn-primary btn-block" type="submit" id="payButton" onclick="payOrder()">立即支付</button>
@@ -106,11 +110,15 @@
     function render(detail){
         var goods = detail.goodsVo;
         var order = detail.order;
+        var address=detail.address;
 
         $("#goodsName").text(goods.goodsName);
         $("#goodsImg").attr("src", goods.goodsImg);
         $("#createDate").text(new Date(order.createDate).format("yyyy-MM-dd HH:mm:ss"));
         $("#goodsPrice").text(order.goodsPrice);
+        $("#address").text(address.address);
+        $("#phone").text(address.phone);
+        $("#name").text(address.name);
 
         var status = order.status;
         var statusText = "";

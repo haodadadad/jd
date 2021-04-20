@@ -15,6 +15,7 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\SeckillOrderSer
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\UserController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\LoginController.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\pojo\SeckillGoods.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\AddressMapper.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\impl\OrderServiceImpl.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\RespBeanEnum.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\SecKillController.java
@@ -34,6 +35,7 @@ E:\Java\SpringBoot\project\src\main\java\com\jit\jd\controller\AdminLoginControl
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\service\IUserService.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\UserMapper.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\RespBean.java
+E:\Java\SpringBoot\project\src\main\java\com\jit\jd\pojo\Address.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\vo\LoginVo.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\exception\GlobalException.java
 E:\Java\SpringBoot\project\src\main\java\com\jit\jd\mapper\SeckillGoodsMapper.java

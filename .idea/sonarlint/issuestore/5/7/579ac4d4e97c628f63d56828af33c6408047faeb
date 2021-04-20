@@ -1,14 +1,14 @@
 
-X	java:S125I"<This block of commented-out lines of code should be removed.(¾ŠĞ8ŠƒÃí†/
-L
-java:S3740:"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
-h
-java:S2259"JA "NullPointerException" could be thrown; "redisCaptcha" is nullable here.(˜œĞ°8ŠƒÃí†/
-H
-java:S1481@"+Remove this unused "result" local variable.(Ÿ²›8ŠƒÃí†/
-M
-java:S3740„"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
-W
-java:S1854@":Remove this useless assignment to local variable "result".(Ÿ²›8ŠƒÃí†/
 L
 java:S37405"/Provide the parametrized type for this generic.(‚Ê«8ŠƒÃí†/
+H
+java:S1481@"+Remove this unused "result" local variable.(Ÿ²›8ŠƒÃí†/
+L
+java:S3740:"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
+M
+java:S3740„"/Provide the parametrized type for this generic.(®¶•Ë8ŠƒÃí†/
+X	java:S125I"<This block of commented-out lines of code should be removed.(¾ŠĞ8ŠƒÃí†/
+W
+java:S1854@":Remove this useless assignment to local variable "result".(Ÿ²›8ŠƒÃí†/
+h
+java:S2259"JA "NullPointerException" could be thrown; "redisCaptcha" is nullable here.(˜œĞ°8ŠƒÃí†/

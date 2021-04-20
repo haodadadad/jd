@@ -10,6 +10,7 @@ com\jit\jd\pojo\Goods.class
 com\jit\jd\controller\RegisterController.class
 com\jit\jd\service\impl\SeckillGoodsServiceImpl.class
 com\jit\jd\service\IGoodsService.class
+com\jit\jd\mapper\AddressMapper.class
 com\jit\jd\controller\GoodsController.class
 com\jit\jd\vo\RespBean.class
 com\jit\jd\rabbitmq\MQReceiver.class
@@ -30,6 +31,7 @@ com\jit\jd\service\IOrderService.class
 com\jit\jd\vo\DetailVo.class
 com\jit\jd\mapper\OrderMapper.class
 com\jit\jd\service\impl\OrderServiceImpl.class
+com\jit\jd\pojo\Address.class
 com\jit\jd\utils\UUIDUtil.class
 com\jit\jd\utils\CookieUtil.class
 com\jit\jd\config\AccessLimit.class
