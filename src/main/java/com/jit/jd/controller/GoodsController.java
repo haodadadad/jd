@@ -1,5 +1,6 @@
 package com.jit.jd.controller;
 
+import com.jit.jd.pojo.Goods;
 import com.jit.jd.pojo.User;
 import com.jit.jd.service.IGoodsService;
 import com.jit.jd.service.IOrderService;
@@ -21,6 +22,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -64,57 +66,50 @@ public class GoodsController {
         }
         return html;
     }
-//跳转管理员列表页
+
+    //跳转管理员列表页
     @RequestMapping("/toAdminList")
-    public String toList( Model model,User user) {
+    public String toList(Model model, User user) {
         model.addAttribute("user", user);
-        model.addAttribute("goodsList",goodsService.findGoodsVo());
+        model.addAttribute("goodsList", goodsService.findGoodsVo());
         return "admin/adminList";
-    }
-//跳转后台管理页面
-    @RequestMapping("/toAdminListLink")
-    public String toLinkList( Model model,User user) {
-        model.addAttribute("user", user);
-        model.addAttribute("goodsList",goodsService.findGoodsVo());
-        return "admin/adminListLink";
     }
 
     //跳转管理员更新页
-    //跳转商品详情页
     @RequestMapping("/toUpdateDetail/{goodsId}")
-    public String toDetail(Model model, User user, @PathVariable Long goodsId){
-        model.addAttribute("user",user);
-        GoodsVo goodsVo=goodsService.findGoodsVoByGoodsId(goodsId);
+    public String toDetail(Model model, User user, @PathVariable Long goodsId) {
+        model.addAttribute("user", user);
+        GoodsVo goodsVo = goodsService.findGoodsVoByGoodsId(goodsId);
         //抢购时间判断
-        Date startDate=goodsVo.getStartDate();
-        Date endDate=goodsVo.getEndDate();
-        Date nowDate=new Date();
+        Date startDate = goodsVo.getStartDate();
+        Date endDate = goodsVo.getEndDate();
+        Date nowDate = new Date();
         //秒杀状态
-        int secKillStatus=0;
+        int secKillStatus = 0;
         //秒杀倒计时
-        int remainSeconds=0;
+        int remainSeconds = 0;
         //秒杀还未开始
-        if (nowDate.before(startDate)){
-            remainSeconds=((int)((startDate.getTime()-nowDate.getTime())/1000));
+        if (nowDate.before(startDate)) {
+            remainSeconds = ((int) ((startDate.getTime() - nowDate.getTime()) / 1000));
 
-        }else if (nowDate.after(endDate)){
+        } else if (nowDate.after(endDate)) {
             //秒杀已结束
-            secKillStatus=2;
-            remainSeconds=-1;
-        }else {
-            secKillStatus=1;
-            remainSeconds=0;
+            secKillStatus = 2;
+            remainSeconds = -1;
+        } else {
+            secKillStatus = 1;
+            remainSeconds = 0;
         }
-        model.addAttribute("remainSeconds",remainSeconds);
-        model.addAttribute("secKillStatus",secKillStatus);
-        model.addAttribute("goods",goodsVo);
+        model.addAttribute("remainSeconds", remainSeconds);
+        model.addAttribute("secKillStatus", secKillStatus);
+        model.addAttribute("goods", goodsVo);
         return "admin/updateDetail";
     }
 
     //跳转商品详情页
     @RequestMapping(value = "/toDetail2/{goodsId}", produces = "text/html;charset=utf-8")
     @ResponseBody
-    public String toDetail2( Model model,User user, @PathVariable Long goodsId, HttpServletRequest request, HttpServletResponse response) {
+    public String toDetail2(Model model, User user, @PathVariable Long goodsId, HttpServletRequest request, HttpServletResponse response) {
 
         //Redis中获取页面，如果不为空，直接返回页面
         ValueOperations valueOperations = redisTemplate.opsForValue();
@@ -197,7 +192,51 @@ public class GoodsController {
     //订单列表页
     @RequestMapping("/toAdminOrderList")
     public String toAdminList(Model model) {
-        model.addAttribute("orderList",orderService.findOrderVo());
+        model.addAttribute("orderList", orderService.findOrderVo());
         return "admin/adminOrderList";
     }
+
+
+    //跳转管理员商品列表页
+    @RequestMapping("/toAdminGoodsList")
+    public String toAdminGoodsList(Model model, User user) {
+        model.addAttribute("user", user);
+        model.addAttribute("goodsList", goodsService.findGoodsVo());
+        return "admin/adminGoodsList";
+    }
+
+    //跳转管理员管理用户列表页
+    @RequestMapping("/toAdminUserList")
+    public String toAdminUserList(Model model, User user) {
+        model.addAttribute("user", user);
+        model.addAttribute("userList", userService.findUser());
+        return "admin/adminUserList";
+    }
+
+    //添加商品
+    @RequestMapping("/addGoods")
+    public String addGoods(String goodsName, String goodsTitle, String goodsDetail, Integer goodsStock, BigDecimal goodsPrice) {
+        return goodsService.addGoods(goodsName, goodsTitle, goodsDetail, goodsStock, goodsPrice);
+    }
+
+    //修改商品
+    @RequestMapping("/adminModifyGoods/{goodsId}")
+    public String adminModifyGoods(Model model, @PathVariable Long goodsId) {
+        Goods goods = goodsService.getById(goodsId);
+        model.addAttribute("goods", goods);
+        return "admin/adminModifyGoods";
+    }
+
+    //修改商品
+    @RequestMapping("/modifyGoods")
+    public String modifyGoods(Long id,String goodsName, String goodsTitle, String goodsDetail, Integer goodsStock, BigDecimal goodsPrice) {
+        return goodsService.modifyGoods(id,goodsName, goodsTitle, goodsDetail, goodsStock, goodsPrice);
+    }
+    //删除商品
+    @RequestMapping("/adminDelGoods/{goodsId}")
+    public String adminDelGoods(Model model, @PathVariable Long goodsId) {
+        return goodsService.delGoods(goodsId);
+    }
+
+
 }

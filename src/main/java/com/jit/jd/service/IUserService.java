@@ -7,6 +7,7 @@ import com.jit.jd.vo.RespBean;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * <p>
@@ -37,5 +38,6 @@ public interface IUserService extends IService<User> {
     String setUserInfo(Long userId, String address, String name, String phone, HttpServletRequest request, HttpServletResponse response);
 
 
+    List <User> findUser();
 }
 

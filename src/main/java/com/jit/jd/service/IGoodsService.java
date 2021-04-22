@@ -4,6 +4,7 @@ import com.jit.jd.pojo.Goods;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.jit.jd.vo.GoodsVo;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -21,4 +22,12 @@ public interface IGoodsService extends IService<Goods> {
     GoodsVo findGoodsVoByGoodsId(Long goodsId);
 
     int update(GoodsVo goods);
+
+    String addGoods(String goodsName, String goodsTitle, String goodsDetail, Integer goodsStock, BigDecimal goodsPrice);
+
+    Goods adminModifyGoods(Long goodsId);
+
+    String modifyGoods(Long id, String goodsName, String goodsTitle, String goodsDetail, Integer goodsStock, BigDecimal goodsPrice);
+
+    String delGoods(Long goodsId);
 }

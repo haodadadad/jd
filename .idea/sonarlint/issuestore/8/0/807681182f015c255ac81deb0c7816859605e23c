@@ -1,6 +1,6 @@
 
-Z	java:S106M"9Replace this use of System.out or System.err by a logger.(®¬¥ãıÿÿÿÿ8ü”Ë«/
 O
-java:S1128"2Remove this unused import 'com.jit.jd.pojo.Order'.(º‹¿í8õÉ·×/
+java:S1128"2Remove this unused import 'com.jit.jd.pojo.Order'.(º‹¿í8¼¢©Á/
 \
 java:S1128":Remove this unused import 'com.jit.jd.mapper.OrderMapper'.(§ó…üÿÿÿÿ8Ü®úÿŒ/
+Z	java:S106J"9Replace this use of System.out or System.err by a logger.(®¬¥ãıÿÿÿÿ8ü”Ë«/

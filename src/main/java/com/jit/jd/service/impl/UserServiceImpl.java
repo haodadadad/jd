@@ -21,6 +21,7 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>
@@ -145,6 +146,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
 
 
+    }
+
+    @Override
+    public List<User> findUser() {
+        return userMapper.selectList(null);
     }
 
 }

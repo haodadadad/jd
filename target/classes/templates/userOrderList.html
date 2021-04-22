@@ -45,6 +45,8 @@
             <td>下单时间</td>
             <td>状态</td>
             <td>数量</td>
+            <td>操作</td>
+            <td> </td>
         </tr>
         <tr th:each="order,orderStat : ${userOrderList}">
             <td th:text="${order.goodsName}"></td>
@@ -56,7 +58,7 @@
                 <p th:case="'0'">待付款</p>
                 <p th:case="'1'">待发货</p>
                 <p th:case="'2'">已发货</p>
-                <p th:case="'3'">已收货</p>
+                <p th:case="'3'" th:id="receive+${order.id}">已收货</p>
                 <p th:case="'4'">已退款</p>
                 <p th:case="'5'">已完成</p>
                 <!-- *: case的默认的选项 -->
@@ -64,9 +66,75 @@
             </td>
 
             <td th:text="${order.goodsCount}"></td>
+
+            <td th:if="${order.status==2}">
+                <a th:href="'/order/receiveOrder/'+${order.id}">
+                    <button class="btn btn-primary btn-xs" >确认收货</button>
+                </a>
+
+<!--                <input type="hidden" name="id" id="id" th:value="${order.id}"/>-->
+<!--                <button class="btn btn-primary btn-xs" id="receiveButton"  th:onclick="receiveOrder()" >收货</button>-->
+<!--                <button class="btn btn-primary btn-block" type="submit" id="receiveButton" onclick="receiveOrder()">确认收货</button>-->
+<!--            <td><a th:href="'/order/receiveOrder/'+${order.id}">确认收货</a></td>-->
+            </td>
+
+
+            <td th:if="${order.status==0}">
+                <a href="/order/payOrder">
+                    <button class="btn btn-primary btn-xs" >付款</button>
+                </a>
+            </td>
+
         </tr>
     </table>
 </div>
+
+
+<script>
+    function reloadPage(){
+        location.reload()
+    }
+    function receiveOrder(){
+        var orderId = g_getQueryString("orderId");
+        $.ajax({
+            url: "/order/receiveOrder",
+            type: "POST",
+            data: {
+                "orderId": id
+            },
+            success: function (data) {
+                javascript:location.reload();
+            },
+            error: function () {
+                layer.closeAll();
+            }
+        });
+    }
+
+    // function receiveOrder(oid){
+    //     // document.getElementById("receive"+oid).innerHTML="已收货";
+    //     $.ajax({
+    //         url: "/order/receiveOrder",
+    //         type: "POST",
+    //         data: {
+    //             "orderId": oid
+    //         },
+    //         success: function (data) {
+    //
+    //             layer.closeAll();
+    //             if (data.code == 200) {
+    //                 javascript:location.reload();
+    //                 document.getElementById("receive"+oid).innerHTML="已收货";
+    //             } else {
+    //                 layer.msg(data.message);
+    //             }
+    //         },
+    //         error: function () {
+    //             layer.closeAll();
+    //         }
+    //     });
+    // }
+</script>
 </body>
 
 </html>

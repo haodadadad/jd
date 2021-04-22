@@ -23,6 +23,7 @@
             SELECT
                 g.id,
                 g.goods_name,
+                g.goods_title,
                 g.goods_img,
                 g.goods_detail,
                 g.goods_price,

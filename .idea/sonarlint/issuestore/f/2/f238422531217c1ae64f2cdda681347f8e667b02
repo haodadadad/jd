@@ -1,3 +1,7 @@
 
+i
+java:S1128"GRemove this unused import 'com.baomidou.mybatisplus.annotation.IdType'.(İàƒ©ùÿÿÿÿ8ß°Šñ/
 8
-java:S1700"Rename field "address"(÷§ùÿÿÿÿ8ùûŠ/
+java:S1700"Rename field "address"(÷§ùÿÿÿÿ8ùûŠ/
+e
+java:S1128"HRemove this unused import 'com.baomidou.mybatisplus.annotation.TableId'.(ÕƒõÊ8ß°Šñ/

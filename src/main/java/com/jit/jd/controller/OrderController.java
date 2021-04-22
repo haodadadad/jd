@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author jit
@@ -24,15 +24,15 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 @RequestMapping("/order")
-public class OrderController  {
+public class OrderController {
 
     @Autowired
     private IOrderService orderService;
 
     @RequestMapping("/detail")
     @ResponseBody
-    public RespBean detail(User user, @RequestParam("orderId") Long orderId){
-        if (null == user){
+    public RespBean detail(User user, @RequestParam("orderId") Long orderId) {
+        if (null == user) {
             return RespBean.error(RespBeanEnum.SESSION_ERROR);
         }
         OrderDetailVo detailVo = orderService.detail(orderId);
@@ -41,12 +41,12 @@ public class OrderController  {
 
     @RequestMapping("/payOrder")
     @ResponseBody
-    public RespBean payOrder(User user, @RequestParam("orderId") Long orderId){
-        if (null == user){
+    public RespBean payOrder(User user, @RequestParam("orderId") Long orderId) {
+        if (null == user) {
             return RespBean.error(RespBeanEnum.SESSION_ERROR);
         }
 
-       orderService.payOrder(user, orderId);
+        orderService.payOrder(user, orderId);
         return RespBean.success();
     }
 
@@ -54,29 +54,34 @@ public class OrderController  {
     @RequestMapping("/toOrderList")
     public String toList(Model model, User user) {
         model.addAttribute("user", user);
-        model.addAttribute("orderList",orderService.findOrderVo());
+        model.addAttribute("orderList", orderService.findOrderVo());
         return "orderList";
     }
 
 
     //用户订单列表页
     @RequestMapping("/toUserOrderList/{userId}")
-    public String toUserList(Model model, User user,@PathVariable Long userId) {
+    public String toUserList(Model model, User user, @PathVariable Long userId) {
         model.addAttribute("user", user);
-        model.addAttribute("userOrderList",orderService.findUserOrderVo(userId));
+        model.addAttribute("userOrderList", orderService.findUserOrderVo(userId));
         return "userOrderList";
     }
 
 
-
-
-
     @RequestMapping("/sendOrder")
 
-    public RespBean sendOrder( @RequestParam ("orderId") Long orderId){
-        System.out.println("orderid"+orderId);
+    public RespBean sendOrder(@RequestParam("orderId") Long orderId) {
+        System.out.println("orderid" + orderId);
         orderService.sendOrder(orderId);
         return RespBean.success();
+    }
+
+
+    @RequestMapping("/receiveOrder/{orderId}")
+    public String receiveOrder(Model model, User user, @PathVariable Long orderId) {
+        orderService.receiveOrder(orderId);
+
+       return  "redirect:/goods/toList";
     }
 
 

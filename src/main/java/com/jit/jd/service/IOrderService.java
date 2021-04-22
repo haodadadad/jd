@@ -37,4 +37,6 @@ public interface IOrderService extends IService<Order> {
     Order sendOrder( Long orderId);
 
     List<OrderVo> findUserOrderVo(Long userId);
+
+    Order receiveOrder(Long orderId);
 }
