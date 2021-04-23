@@ -30,4 +30,6 @@ public interface IGoodsService extends IService<Goods> {
     String modifyGoods(Long id, String goodsName, String goodsTitle, String goodsDetail, Integer goodsStock, BigDecimal goodsPrice);
 
     String delGoods(Long goodsId);
+
+    int updateImgGoods(Long goodsId,String path,String fileName);
 }

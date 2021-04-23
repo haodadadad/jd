@@ -1,14 +1,14 @@
 
 Z	java:S106}"9Replace this use of System.out or System.err by a logger.(¦îÁıÿÿÿÿ8† «–Š/
+[	java:S106‹"9Replace this use of System.out or System.err by a logger.(¡İÏÇÿÿÿÿÿ8éê÷£/
+L
+java:S3740("/Provide the parametrized type for this generic.(‚Ê«8Öÿß¥…/
 W	java:S125I"<This block of commented-out lines of code should be removed.(¥Š&8Öÿß¥…/
 c
 java:S1192H"FDefine a constant instead of duplicating this literal "user:" 3 times.(æ½ÊÌ8¯Ö“Ã…/
+U	java:S106~"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8† «–Š/
+W	java:S1253"<This block of commented-out lines of code should be removed.(˜àÁz8ÁÂ”˜…/
 P
 java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÿÁ£‘Š/
-U	java:S106~"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ8† «–Š/
-[	java:S106‹"9Replace this use of System.out or System.err by a logger.(¡İÏÇÿÿÿÿÿ8éê÷£/
 F
 java:S1940s")Use the opposite operator ("!=") instead.(·ô”Ú8ê†­‘Š/
-L
-java:S3740("/Provide the parametrized type for this generic.(‚Ê«8Öÿß¥…/
-W	java:S1253"<This block of commented-out lines of code should be removed.(˜àÁz8ÁÂ”˜…/

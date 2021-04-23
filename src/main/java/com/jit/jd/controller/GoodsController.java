@@ -14,15 +14,19 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+import sun.applet.resources.MsgAppletViewer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +45,8 @@ public class GoodsController {
     @Autowired
     //手动渲染
     private ThymeleafViewResolver thymeleafViewResolver;
+
+    String url ;
 
     //跳转到商品页面
     @RequestMapping(value = "/toList", produces = "text/html;charset=utf-8")
@@ -238,5 +244,70 @@ public class GoodsController {
         return goodsService.delGoods(goodsId);
     }
 
+    //跳转修改商品图片
+    @RequestMapping("/adminImgGoods/{goodsId}")
+    public String adminImgGoods(Model model, @PathVariable Long goodsId) {
+        Goods goods=new Goods();
+        goods=goodsService.getById(goodsId);
+        model.addAttribute("goods",goods);
+        return "admin/adminImgGoods";
+    }
+
+    //修改商品图片
+    @RequestMapping(value = "/adminUpdateImgGoods",produces="application/json;charset=UTF-8")
+
+    public String adminUpdateImgGoods(@RequestParam("goodsImg") MultipartFile file,@RequestParam("goodsId")Long goodsId) {
+
+        System.out.print("上传文件==="+"\n");
+        //判断文件是否为空
+        if (file.isEmpty()) {
+            return "上传文件不可为空";
+        }
+
+
+        // 获取文件名
+        String fileName = file.getOriginalFilename();
+        System.out.print("上传的文件名为: "+fileName+"\n");
+//
+//        fileName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "_" + fileName;
+//        System.out.print("（加个时间戳，尽量避免文件名称重复）保存的文件名为: "+fileName+"\n");
+
+
+        //加个时间戳，尽量避免文件名称重复
+        String path = "E:\\Java\\SpringBoot\\project\\src\\main\\resources\\static\\img\\" +fileName;
+
+        //文件绝对路径
+        System.out.print("保存文件绝对路径"+path+"\n");
+
+        //创建文件路径
+        File dest = new File(path);
+
+        //判断文件是否已经存在
+        if (dest.exists()) {
+            return "文件已经存在";
+        }
+
+        //判断文件父目录是否存在
+        if (!dest.getParentFile().exists()) {
+            dest.getParentFile().mkdir();
+        }
+
+
+        try {
+            //上传文件
+            file.transferTo(dest); //保存文件
+            System.out.print("保存文件路径"+path+"\n");
+            url="http://localhost:8081/images/"+fileName;
+            int jieguo= goodsService.updateImgGoods(goodsId,path,fileName);
+            System.out.print("插入结果"+jieguo+"\n");
+            System.out.print("保存的完整url===="+url+"\n");
+
+        } catch (IOException e) {
+            return "上传失败";
+        }
+
+        return "redirect:/goods/toAdminGoodsList";
+
+    }
 
 }

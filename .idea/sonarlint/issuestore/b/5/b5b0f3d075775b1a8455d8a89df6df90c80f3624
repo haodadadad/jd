@@ -1,0 +1,17 @@
+
+U	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(ñúº
+CWeb:BoldAndItalicTagsCheck("Replace this <i> tag by <em>.(ÔŞ•±
+BWeb:BoldAndItalicTagsCheck+"Replace this <i> tag by <em>.(è¶ô7
+CWeb:BoldAndItalicTagsCheck."Replace this <i> tag by <em>.(¿†øĞ
+CWeb:BoldAndItalicTagsCheck1"Replace this <i> tag by <em>.(Áƒû˜
+MWeb:TableWithoutCaptionCheckL" Add a description to this table.(Ìä¶»şÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheckO";Add either an 'id' or a 'scope' attribute to this <th> tag.(¤€çÊ
+g Web:TableHeaderHasIdOrScopeCheckP";Add either an 'id' or a 'scope' attribute to this <th> tag.(ä€È
+g Web:TableHeaderHasIdOrScopeCheckQ";Add either an 'id' or a 'scope' attribute to this <th> tag.(×ŸÔ€
+l Web:TableHeaderHasIdOrScopeCheckR";Add either an 'id' or a 'scope' attribute to this <th> tag.(ïŞùÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckS";Add either an 'id' or a 'scope' attribute to this <th> tag.(°­²èûÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckT";Add either an 'id' or a 'scope' attribute to this <th> tag.(˜¹±Ğùÿÿÿÿ
+GWeb:ImgWithoutAltCheck\"%Add an "alt" attribute to this image.(³²“À
+IWeb:AvoidCommentedOutCodeCheckb"Remove this commented out code.(Ÿ¼ï÷
+Y	Web:S5255"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(¹«…
+^	Web:S5255#"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(ËµÇ¹ûÿÿÿÿ

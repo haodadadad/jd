@@ -1,4 +1,6 @@
 spring:
+  resources:
+    static-locations: classpath:/static/
   thymeleaf:
     cache: false
   datasource:
@@ -68,3 +70,4 @@ server:
     host: 127.0.0.1
     username: guest
     password: guest
+

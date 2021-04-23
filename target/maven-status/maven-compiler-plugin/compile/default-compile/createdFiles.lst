@@ -1,3 +1,4 @@
 com\jit\jd\service\IGoodsService.class
 com\jit\jd\controller\GoodsController.class
 com\jit\jd\service\impl\GoodsServiceImpl.class
+com\jit\jd\config\WebConfig.class

@@ -1,21 +1,36 @@
 
-c
-java:S1192i"FDefine a constant instead of duplicating this literal "goods" 3 times.(ØÒû8è¡ÙĞ/
-L
-java:S37402"/Provide the parametrized type for this generic.(®¶•Ë8½¢¢Â…/
-Q
-java:S1874@"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
-Q
-java:S18744"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
-g
-java:S11923"JDefine a constant instead of duplicating this literal "goodsList" 6 times.(¾ÈÏ½8½¢¢Â…/
-X	java:S125;"<This block of commented-out lines of code should be removed.(’È…8½¢¢Â…/
-Q
-java:S1874u"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
-R
-java:S1874–"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
-Y	java:S125š"<This block of commented-out lines of code should be removed.(ë‚œ™8ØŠÊ´‰/
-L
-java:S3740s"/Provide the parametrized type for this generic.(®¶•Ë8ØŠÊ´‰/
-L
-java:S3740("/Provide the parametrized type for this generic.(‚Ê«8½¢¢Â…/
+a
+java:S1192"FDefine a constant instead of duplicating this literal "goods" 4 times.(ØÒû8è¡ÙĞ/
+O
+java:S1874"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/
+O
+java:S1874"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
+X	java:S106"9Replace this use of System.out or System.err by a logger.(éá¤ıÿÿÿÿ8ÊÕô/
+\
+java:S1128"ARemove this unused import 'sun.applet.resources.MsgAppletViewer'.(µ¼ˆ8­Ù­î/
+J
+java:S3740"/Provide the parametrized type for this generic.(‚Ê«8½¢¢Â…/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(°§ÿ°8×Öô/
+X	java:S106"9Replace this use of System.out or System.err by a logger.(ª‹ø±ÿÿÿÿÿ8ÊÕô/
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(µ¼ˆ8­Ù­î/
+e
+java:S1192"JDefine a constant instead of duplicating this literal "goodsList" 6 times.(¾ÈÏ½8½¢¢Â…/
+V	java:S125"<This block of commented-out lines of code should be removed.(ë‚œ™8ØŠÊ´‰/
+O
+java:S1874"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8ØŠÊ´‰/
+Y
+java:S1854"9Remove this useless assignment to local variable "goods".(¸·å‡şÿÿÿÿ8‡ÁÑë/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(…ô»„8ÊÕô/
+V	java:S125"<This block of commented-out lines of code should be removed.(å¦Ôà8Ç¢ô/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ä÷º8ÊÕô/
+X	java:S106"9Replace this use of System.out or System.err by a logger.(›«¹Ìıÿÿÿÿ8Ç¢ô/
+J
+java:S3740"/Provide the parametrized type for this generic.(®¶•Ë8ØŠÊ´‰/
+V	java:S125"<This block of commented-out lines of code should be removed.(’È…8½¢¢Â…/
+J
+java:S3740"/Provide the parametrized type for this generic.(®¶•Ë8½¢¢Â…/
+i
+java:S1128"IRemove this unused import 'org.springframework.web.servlet.ModelAndView'.(Ç¨ÿäûÿÿÿÿ8×Öô/
+O
+java:S1874"/Remove this use of "isEmpty"; it is deprecated.(™É’Êúÿÿÿÿ8½¢¢Â…/

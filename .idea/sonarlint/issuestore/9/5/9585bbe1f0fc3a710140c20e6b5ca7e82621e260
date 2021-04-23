@@ -1,3 +1,16 @@
 
-V
-java:S1128"9Remove this unused import 'com.jit.jd.pojo.SeckillGoods'.(…„Ò8¬ÃûÊ/
+X	java:S106"9Replace this use of System.out or System.err by a logger.(Öö¬ˆùÿÿÿÿ8åì°ô/
+Y
+java:S1854"9Remove this useless assignment to local variable "goods".(¸·å‡şÿÿÿÿ8ûùéô/
+C	java:S108")Either remove or fill this block of code.(å¥‡8ÜøÑ/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(éıä8åì°ô/
+|
+java:S1192"aDefine a constant instead of duplicating this literal "redirect:/goods/toAdminGoodsList" 3 times.(Ÿ¨ÉÜ8•ÎøÑ/
+D
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8åì°ô/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(’Á²è8åì°ô/
+T
+java:S1128"9Remove this unused import 'com.jit.jd.pojo.SeckillGoods'.(…„Ò8¬ÃûÊ/
+X	java:S106"9Replace this use of System.out or System.err by a logger.(İîë¿øÿÿÿÿ8åì°ô/
+P
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8åì°ô/

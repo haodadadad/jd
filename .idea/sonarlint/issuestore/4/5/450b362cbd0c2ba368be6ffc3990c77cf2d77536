@@ -1,0 +1,20 @@
+
+U	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(ñúº
+CWeb:BoldAndItalicTagsCheck("Replace this <i> tag by <em>.(ÔŞ•±
+BWeb:BoldAndItalicTagsCheck+"Replace this <i> tag by <em>.(è¶ô7
+CWeb:BoldAndItalicTagsCheck."Replace this <i> tag by <em>.(¿†øĞ
+CWeb:BoldAndItalicTagsCheck1"Replace this <i> tag by <em>.(Áƒû˜
+MWeb:TableWithoutCaptionCheckL" Add a description to this table.(Ìä¶»şÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckO";Add either an 'id' or a 'scope' attribute to this <th> tag.(ãô°¥úÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckP";Add either an 'id' or a 'scope' attribute to this <th> tag.(Õ«¹üÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheckQ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ú»šï
+g Web:TableHeaderHasIdOrScopeCheckR";Add either an 'id' or a 'scope' attribute to this <th> tag.(ä€È
+g Web:TableHeaderHasIdOrScopeCheckS";Add either an 'id' or a 'scope' attribute to this <th> tag.(òŒ‘
+l Web:TableHeaderHasIdOrScopeCheckT";Add either an 'id' or a 'scope' attribute to this <th> tag.(öø×¼ıÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckU";Add either an 'id' or a 'scope' attribute to this <th> tag.(Áÿÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheckW";Add either an 'id' or a 'scope' attribute to this <th> tag.(ç¬¨Î
+l Web:TableHeaderHasIdOrScopeCheckX";Add either an 'id' or a 'scope' attribute to this <th> tag.(ìÖ¢Õøÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheckY";Add either an 'id' or a 'scope' attribute to this <th> tag.(şŞŒÚ
+GWeb:ImgWithoutAltChecka"%Add an "alt" attribute to this image.(³²“À
+Y	Web:S5255"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(¹«…
+^	Web:S5255#"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(ËµÇ¹ûÿÿÿÿ
